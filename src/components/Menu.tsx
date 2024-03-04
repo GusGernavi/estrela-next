@@ -1,5 +1,6 @@
 import { Flare, Home, Star, Telegram } from "@mui/icons-material";
 import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
+import { Colors } from "../colors";
 
 type Props = {
   value: number | undefined;
@@ -32,39 +33,47 @@ export const Menu: React.FC<Props> = ({ setValue, value }) => {
         <BottomNavigationAction
           sx={{
             ".Mui-selected": {
-              color: "#bb07f2 ",
+              color: Colors.secondary,
             },
           }}
           label="Home"
-          icon={<Home sx={{ color: value === 0 ? "#bb07f2" : "inherit" }} />}
+          icon={
+            <Home sx={{ color: value === 0 ? Colors.secondary : "inherit" }} />
+          }
         />
         <BottomNavigationAction
           sx={{
             ".Mui-selected": {
-              color: "#bb07f2",
+              color: Colors.secondary,
             },
           }}
           label="Raios de Luz"
-          icon={<Star sx={{ color: value === 1 ? "#bb07f2" : "inherit" }} />}
+          icon={
+            <Star sx={{ color: value === 1 ? Colors.secondary : "inherit" }} />
+          }
         />
         <BottomNavigationAction
           sx={{
             ".Mui-selected": {
-              color: "#bb07f2",
+              color: Colors.secondary,
             },
           }}
           label="Depoimentos"
-          icon={<Flare sx={{ color: value === 2 ? "#bb07f2" : "inherit" }} />}
+          icon={
+            <Flare sx={{ color: value === 2 ? Colors.secondary : "inherit" }} />
+          }
         />
         <BottomNavigationAction
           sx={{
             ".Mui-selected": {
-              color: "#bb07f2",
+              color: Colors.secondary,
             },
           }}
           label="Contato"
           icon={
-            <Telegram sx={{ color: value === 3 ? "#bb07f2" : "inherit" }} />
+            <Telegram
+              sx={{ color: value === 3 ? Colors.secondary : "inherit" }}
+            />
           }
         />
       </BottomNavigation>

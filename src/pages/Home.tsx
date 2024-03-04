@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import capa from "../assets/imgs/Capa.jpg";
 import { CardShow } from "../components/CardShow";
 import { Show } from "./@type";
+import { Colors } from "../colors";
 
 export const HomePage: React.FC = () => {
   const [shows, setShows] = useState<Show[]>([]);
@@ -211,7 +212,7 @@ export const HomePage: React.FC = () => {
           px={2}
           justifyContent="center"
           sx={{
-            backgroundColor: "#6c007a",
+            backgroundColor: Colors.primary,
             boxShadow: "1 1 1 1",
           }}
           py={3}
