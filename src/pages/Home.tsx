@@ -79,22 +79,54 @@ export const HomePage: React.FC = () => {
   return (
     <>
       <Grid
+        container
         item
-        md={12}
-        height="950px"
+        xs={12}
+        height={{ md: "950px", xs: "770px" }}
         sx={{
           backgroundImage: `url(${capa})`,
           backgroundSize: "cover",
+          backgroundPosition: "center top",
         }}
+        display="flex"
+        alignItems={{ xs: "flex-end", lg: "inherit" }}
       >
-        <Grid container justifyContent="right">
-          <Grid item md={3} mt={15} mr={10}>
+        <Grid container justifyContent={{ lg: "right", xs: "center" }}>
+          <Grid
+            item
+            lg={3}
+            xs={11}
+            mt={15}
+            mb={{ xs: 2, lg: 0 }}
+            mr={{ xs: 0, lg: 10 }}
+            display={{ xs: "none", md: "block" }}
+          >
             <iframe
               // style="border-radius:12px"
               src="https://open.spotify.com/embed/album/4MGZMX2BTjImtPDCay6Tag?utm_source=generator"
               width="100%"
-              height="352"
-              frameBorder="0"
+              height="380"
+              // frameBorder="0"
+              // allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </Grid>
+          <Grid
+            item
+            lg={3}
+            xs={11}
+            mt={15}
+            mb={{ xs: 2, lg: 0 }}
+            mr={{ xs: 0, lg: 10 }}
+            display={{ xs: "block", md: "none" }}
+          >
+            <iframe
+              // style="border-radius:12px"
+              src="https://open.spotify.com/embed/album/4MGZMX2BTjImtPDCay6Tag?utm_source=generator"
+              width="100%"
+              height="152"
+              // frameBorder="0"
               // allowfullscreen=""
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
@@ -102,7 +134,7 @@ export const HomePage: React.FC = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item md={12} py={4}>
+      <Grid item xs={12} py={4}>
         <Typography
           align="center"
           variant="h2"
@@ -121,7 +153,10 @@ export const HomePage: React.FC = () => {
         <Typography
           align="center"
           mt={1}
-          px={30}
+          px={{
+            xs: 3,
+            lg: 20,
+          }}
           mb={2}
           variant="h2"
           fontFamily="Ojuju, sans-serif"
@@ -169,7 +204,11 @@ export const HomePage: React.FC = () => {
       <Grid item md={12}>
         <Grid
           container
-          spacing={3}
+          spacing={{
+            xs: 4,
+            lg: 2,
+          }}
+          px={2}
           justifyContent="center"
           sx={{
             backgroundColor: "#6c007a",
@@ -189,7 +228,7 @@ export const HomePage: React.FC = () => {
             </Typography>
           </Grid>
           {shows?.map((show) => (
-            <Grid item md={2}>
+            <Grid item lg={3} xs={11}>
               <CardShow show={show} />
             </Grid>
           ))}
