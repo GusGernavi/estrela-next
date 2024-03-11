@@ -5,7 +5,7 @@ import { CardShow } from './card-show'
 const carterOne = Carter({ subsets: ['latin'], weight: '400' })
 
 export async function Shows() {
-  const showsResponse = await fetch('http://localhost:3000/api/shows')
+  const showsResponse = await fetch(process.env.NEXT_PUPLIC_URL + '/api/shows')
   const shows: Show[] = await showsResponse.json()
 
   return (
