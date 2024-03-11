@@ -3,7 +3,7 @@ import { Carter_One as Carter } from 'next/font/google'
 const carterOne = Carter({ subsets: ['latin'], weight: '400' })
 export default function Estrela() {
   return (
-    <div className="bg-white text-center">
+    <div className="bg-white py-10 text-center">
       <h2 className={`py-4 text-3xl font-semibold ${carterOne.className}`}>
         QUEM É ESTRELA, SEMPRE BRILHA!
       </h2>

@@ -1,10 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  formatDateAndTime,
-  returnDateObject,
-} from '../(utils)/formatDateAndTime'
+import { formatDateAndTime } from '../(utils)/formatDateAndTime'
 import { formatLinkGoogleCalendar } from '../(utils)/formatLinkGoogleCalendar'
 import { Show } from './@types'
 
@@ -33,12 +30,7 @@ export function CardShow({
         <h4 className="text-lg font-semibold">{titulo}</h4>
         <Link
           target="_blank"
-          href={formatLinkGoogleCalendar(
-            titulo,
-            returnDateObject(dataInicio),
-            returnDateObject(dataFim),
-            local,
-          )}
+          href={formatLinkGoogleCalendar(titulo, dataInicio, dataFim, local)}
           className="py-3 uppercase text-secondary hover:text-primary"
         >
           Marcar na Agenda

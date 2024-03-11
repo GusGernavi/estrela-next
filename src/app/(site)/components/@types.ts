@@ -5,8 +5,8 @@ export type Show = {
     src: string
     alt: string
   }
-  dataInicio: string
-  dataFim: string
+  dataInicio: Date
+  dataFim: Date
   local: string
   linkLocal: string
   linkCompra: string

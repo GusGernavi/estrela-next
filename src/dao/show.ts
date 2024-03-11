@@ -29,6 +29,8 @@ const showConverter = {
     return {
       ...data,
       id: snapshot.id,
+      dataInicio: data.dataInicio.toDate(),
+      dataFim: data.dataFim.toDate(),
     } as Show
     // return new City(data.name, data.state, data.country)
   },
