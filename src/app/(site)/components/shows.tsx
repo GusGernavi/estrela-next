@@ -1,3 +1,4 @@
+import { getShows } from '@/dao/show'
 import { Carter_One as Carter } from 'next/font/google'
 import { Show } from './@types'
 import { CardShow } from './card-show'
@@ -5,8 +6,8 @@ import { CardShow } from './card-show'
 const carterOne = Carter({ subsets: ['latin'], weight: '400' })
 
 export async function Shows() {
-  const showsResponse = await fetch(process.env.NEXT_PUPLIC_URL + '/api/shows')
-  const shows: Show[] = await showsResponse.json()
+  const showsResponse = getShows()
+  const shows: Show[] = await showsResponse.then((data) => data)
 
   return (
     <div className="bg-primary bg-opacity-50">

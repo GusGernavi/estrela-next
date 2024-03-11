@@ -1,5 +1,5 @@
 export type Show = {
-  id: number
+  id: string
   titulo: string
   image: {
     src: string
