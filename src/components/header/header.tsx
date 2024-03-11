@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <div
-      className={`fixed ${scrolling ? 'bg-transparent' : 'bg-light'} z-10 w-full transition-colors duration-700`}
+      className={`fixed ${scrolling ? 'bg-light md:bg-transparent' : 'bg-light'} z-10 w-full transition-colors duration-700`}
     >
       <nav className="flex justify-center gap-20 bg-transparent py-3">
         <HeaderLink href="/" pathname={pathname} name="Home">

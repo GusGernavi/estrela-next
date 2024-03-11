@@ -16,7 +16,7 @@ export async function Shows() {
       >
         Shows
       </h3>
-      <div className="flex justify-around gap-5 px-5 py-5">
+      <div className="grid grid-cols-1 space-y-5 p-5 md:grid-cols-5 md:space-x-5 md:space-y-0">
         {shows.map((show) => (
           <CardShow key={show.id} show={show} />
         ))}

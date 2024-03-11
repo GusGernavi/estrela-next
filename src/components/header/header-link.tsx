@@ -18,7 +18,7 @@ export default function HeaderLink({
       className={`${pathname === href ? 'text-secondary' : 'text-dark'} hover:text-primary`}
     >
       {children}
-      {name}
+      <div className="hidden md:block">{name}</div>
     </Link>
   )
 }

@@ -5,7 +5,7 @@ import { Shows } from './components/shows'
 export default function Home() {
   return (
     <div
-      className="bg-cover bg-fixed"
+      className="bg-cover bg-fixed bg-center"
       style={{
         backgroundImage: 'url(/Capa.jpg)',
       }}

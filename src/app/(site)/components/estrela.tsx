@@ -8,7 +8,7 @@ export default function Estrela() {
         QUEM É ESTRELA, SEMPRE BRILHA!
       </h2>
       <div className="flex justify-center py-3">
-        <p className="text-md leading-lg break-after-all space-y-3 whitespace-break-spaces text-balance px-20 text-lg">
+        <p className="text-md leading-lg break-after-all space-y-3 whitespace-break-spaces text-balance px-2 text-lg md:px-20">
           Nascida e criada em São Paulo, Stephany Santos é uma jovem periférica
           que sempre esteve em busca de se expressar e foi através da música que
           encontrou uma maneira de demonstrar seus sentimentos e a maneira que

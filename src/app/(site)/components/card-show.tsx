@@ -14,10 +14,10 @@ export function CardShow({
     return image.src
   }
   return (
-    <div className="w-96 overflow-hidden rounded-lg">
+    <div className="overflow-hidden rounded-lg">
       <div>
         <Image
-          className="overflow-hidden"
+          className="w-full overflow-hidden"
           loader={imageLoader}
           src="capa.jpg"
           alt={image.alt}
