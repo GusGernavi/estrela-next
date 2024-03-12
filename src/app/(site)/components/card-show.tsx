@@ -11,6 +11,7 @@ export function CardShow({
   show: Show
 }) {
   const imageLoader = () => {
+    console.log(image.src)
     return image.src
   }
   return (
@@ -19,7 +20,7 @@ export function CardShow({
         <Image
           className="w-full overflow-hidden"
           loader={imageLoader}
-          src="capa.jpg"
+          src={'capa.jpg'}
           alt={image.alt}
           width={400}
           height={300}
