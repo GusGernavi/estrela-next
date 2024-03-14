@@ -1,11 +1,9 @@
-import Header from '@/components/header/header'
-import type { Metadata } from 'next'
-import '../globals.css'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Estrela',
-  description: 'Site da Cantora Estrela',
-}
+import Footer from '@/components/footer/footer'
+import Header from '@/components/header/header'
+import '../globals.css'
+import AuthProvider from './provider/AuthProvider'
 
 export default function RootLayout({
   children,
@@ -19,8 +17,13 @@ export default function RootLayout({
         backgroundImage: '/Capa.jpg',
       }}
     >
-      <Header />
-      {children}
+      <AuthProvider>
+        <>
+          <Header />
+          {children}
+          <Footer />
+        </>
+      </AuthProvider>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { getShows } from '@/dao/show'
 import { Carter_One as Carter } from 'next/font/google'
-import { Show } from './@types'
+import { Show } from '../@types'
 import { CardShow } from './card-show'
 
 const carterOne = Carter({ subsets: ['latin'], weight: '400' })

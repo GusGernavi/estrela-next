@@ -1,4 +1,4 @@
-import { Show } from '@/app/(site)/components/@types'
+import { Show } from '@/app/(site)/@types'
 import { db } from '@/app/config/configFirebase'
 import {
   DocumentData,

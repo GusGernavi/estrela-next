@@ -11,3 +11,8 @@ export type Show = {
   linkLocal: string
   linkCompra: string
 }
+
+export type PostInstagram = {
+  id: string
+  url: string
+}

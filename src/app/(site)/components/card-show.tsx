@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { formatDateAndTime } from '../(utils)/formatDateAndTime'
 import { formatLinkGoogleCalendar } from '../(utils)/formatLinkGoogleCalendar'
-import { Show } from './@types'
+import { Show } from '../@types'
 
 export function CardShow({
   show: { dataFim, dataInicio, image, linkCompra, linkLocal, local, titulo },
@@ -11,7 +11,6 @@ export function CardShow({
   show: Show
 }) {
   const imageLoader = () => {
-    console.log(image.src)
     return image.src
   }
   return (

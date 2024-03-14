@@ -1,4 +1,5 @@
 'use client'
+
 import { House, MusicNote, PaperPlaneTilt } from '@phosphor-icons/react'
 import { ShootingStar } from '@phosphor-icons/react/dist/ssr/ShootingStar'
 import { usePathname } from 'next/navigation'
